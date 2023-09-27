@@ -6,6 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-  public movies=['film1','film2','film3','filme4','film5'];
 
+  public films = [
+    { titre: 'Le Voyage de Chihiro', affiche: './../../assets/chihiro.jpg' },
+    { titre: 'Mon Voisin TOTORO', affiche: './../../assets/totoro.jpeg' },
+    { titre: 'Le Chateau Ambulant', affiche: './../../assets/chateauambulant.jpeg' },
+    { titre: 'Ponyo Sur La Falaise', affiche: './../../assets/ponyo.webp' },
+    { titre: 'Your Name', affiche: './../../assets/yourname.jpeg' }
+  ];
+
+  filmSelectionne: any;
+
+  afficherFilm(film: any): void {
+    this.filmSelectionne = film;
+  }
 }

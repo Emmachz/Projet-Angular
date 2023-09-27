@@ -8,7 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactComponent {
 
-  formulaire: FormGroup;
+  public formulaire: FormGroup;
+  public validemail= false;
 
   constructor(private formBuilder: FormBuilder) {
     this.formulaire = this.formBuilder.group({
@@ -21,12 +22,13 @@ export class ContactComponent {
     });
   }
 
-
-
   onSubmit() {
     if (this.formulaire.valid) {
+      alert('Le formulaire est valide');
       console.log('Données du formulaire soumises :', this.formulaire.value);
     }
   }
+
+  
 
 }

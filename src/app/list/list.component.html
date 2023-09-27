@@ -1,4 +1,15 @@
-<div>
-    <a routerLink="/film" $ngFor="let film of movies">{{movies}}</a>
+<div id="back">
+    <div id="list">
+    <h2>Liste de films :</h2>
+        <ul>
+            <li *ngFor="let film of films" (click)="afficherFilm(film)">
+                {{ film.titre }}
+            </li>
+        </ul>
+    <div *ngIf="filmSelectionne">
+        <h3>{{ filmSelectionne.titre }}</h3>
+        <img id="affiche"[src]="filmSelectionne.affiche" alt="{{ filmSelectionne.titre }}" />
+      </div>
+    </div>
 
 </div>
