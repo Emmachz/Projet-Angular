@@ -15,10 +15,10 @@ export class ListComponent {
     { title: 'Le Tombeau Des Lucioles', poster: './../../assets/tombeau.webp' }
   ];
 
-  public selectedMovie:{title:string, poster:string}|null=null;
+  public selectedMovie: { title: string, poster: string } | null = null;
 
-  public showmovie(movie:{title: string, poster:string}){
-    this.selectedMovie=movie;
+  public showmovie(movie: { title: string, poster: string }) {
+    this.selectedMovie = movie;
   }
-  
+
 }

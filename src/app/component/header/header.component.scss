@@ -1,17 +1,19 @@
-#header{
+#header {
     background-color: #1e3d80;
     height: 50px;
     width: 100%;
 }
 
-#header a{
-    margin : 20px;
+#header a {
+    margin: 20px;
     color: white;
     text-decoration: none;
     transition: color 0.3s, text-decoration 0.3s;
 }
 
 #header a:hover {
-    color: #d3b5ce; /* Couleur de lien au survol */
-    text-decoration: underline; /* Soulignement au survol */
+    color: #d3b5ce;
+    /* Couleur de lien au survol */
+    text-decoration: underline;
+    /* Soulignement au survol */
 }
