@@ -9,7 +9,6 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { ListComponent } from './list/list.component';
 import { ContactComponent } from './contact/contact.component';
 import { GestionComponent } from './gestion/gestion.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListComponent,
     ContactComponent,
     GestionComponent,
-    NotFoundComponent
   ],
   imports: [
     BrowserModule,

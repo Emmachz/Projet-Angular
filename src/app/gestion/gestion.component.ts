@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormDataService} from "../form-data.service";
 
 @Component({
   selector: 'app-gestion',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class GestionComponent {
 
+  public getLastFormData: any = null ;
+
+  constructor(private formService: FormDataService) {
+  }
+
+  ngOnInit(): void {
+    this.getLastFormData = this.formService.getMessage();
+    console.log(this.getLastFormData);
+  }
 }

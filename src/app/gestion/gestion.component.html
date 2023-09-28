@@ -1,1 +1,17 @@
-<p>gestion works!</p>
+<div class="data">
+    <div id="center-content">
+      <div class="centered-content" *ngIf="getLastFormData !== null; else noData">
+        <!-- Affichez les informations du formulaire contact ici -->
+        <h1>Formulaire :</h1>
+        <p><b>Prénom: </b>{{ getLastFormData.get("prenom").value }}</p>
+        <p><b>Nom: </b>{{ getLastFormData.get("nom").value }}</p>
+        <p><b>Âge: </b>{{ getLastFormData.get("age").value }}</p>
+        <p *ngIf="getLastFormData.get('email').value != ''"><b>Email: </b>{{ getLastFormData.get("email").value }}</p>
+        <p><b>Commentaire: </b>{{ getLastFormData.get("commentaire").value }}</p>
+      </div>
+      <ng-template #noData>
+        <!-- Affichez le message "404 not found" ou une image ici -->
+        <p>404 Not Found</p>
+      </ng-template>
+    </div>
+  </div>
