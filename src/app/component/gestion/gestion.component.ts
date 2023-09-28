@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormDataService} from "../form-data.service";
+import {FormDataService} from "../../service/form-data.service";
 
 @Component({
   selector: 'app-gestion',

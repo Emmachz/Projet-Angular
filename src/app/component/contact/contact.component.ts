@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import {FormDataService} from "../form-data.service";
+import {FormDataService} from "../../service/form-data.service";
 
 
 @Component({
@@ -11,43 +11,7 @@ import {FormDataService} from "../form-data.service";
 })
 export class ContactComponent {
 
-  // public formulaire: FormGroup;
-  // public validemail= false;
-
-  // constructor(private formBuilder: FormBuilder) {
-  //   this.formulaire = this.formBuilder.group({
-  //     firstName: ['', Validators.required],
-  //     lastName: ['', Validators.required],
-  //     age: [''],
-  //     checkboxHideEmail: [''],
-  //     email: ['', [Validators.required, Validators.email]],
-  //     comment: ['']
-  //   });
-  //   // if(this.validemail){
-  //   //   this.formulaire=this.formBuilder.group({
-  //   //   email: ['', [Validators.required, Validators.email]],
-  //   // });
-  //   // else{
-  //   //   this.formulaire = this.formBuilder.group({
-  //   //   firstName: ['', Validators.required],
-  //   //   lastName: ['', Validators.required],
-  //   //   age: [''],
-  //   //   checkboxHideEmail: ['',],
-  //   //   email: ['', [Validators.required, Validators.email]],
-  //   //   comment: ['']
-  //   // }
-  //   // }
-  
-  // }
-
-  // onSubmit() {
-  //   if (this.contactForm.valid) {
-  //     alert('Le formulaire est valide');
-  //     console.log('Données du formulaire soumises :', this.contactForm.value);
-  //   }
-  // }
-
-  public isChecked:boolean = true;
+  public isChecked:boolean = false;
   public contactForm = new FormGroup(
     {
       firstName : new FormControl('', [Validators.required]),
@@ -55,9 +19,7 @@ export class ContactComponent {
       age : new FormControl(''),
       email : new FormControl('', [Validators.required, Validators.email]),
       comment: new FormControl('', [Validators.required]),
-
     }
-
   );
 
   constructor(private router: Router,private dataToSend: FormDataService) { }
@@ -75,11 +37,9 @@ export class ContactComponent {
       this.contactForm.get('email')?.setValidators([Validators.required, Validators.email]);
     } else {
       this.contactForm.get('email')?.clearValidators();
+      this.contactForm.get('email')?.setValue('');
     }
     this.contactForm.get('email')?.updateValueAndValidity();
   }
-
-
-  
 
 }
