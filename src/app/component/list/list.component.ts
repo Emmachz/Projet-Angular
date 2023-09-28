@@ -7,17 +7,18 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
 
-  public films = [
-    { titre: 'Le Voyage de Chihiro', affiche: './../../assets/chihiro.jpg' },
-    { titre: 'Mon Voisin TOTORO', affiche: './../../assets/totoro.jpeg' },
-    { titre: 'Le Chateau Ambulant', affiche: './../../assets/chateauambulant.jpeg' },
-    { titre: 'Ponyo Sur La Falaise', affiche: './../../assets/ponyo.webp' },
-    { titre: 'Le Tombeau Des Lucioles', affiche: './../../assets/tombeau.webp' }
+  public movies = [
+    { title: 'Le Voyage de Chihiro', poster: './../../assets/chihiro.jpg' },
+    { title: 'Mon Voisin TOTORO', poster: './../../assets/totoro.jpeg' },
+    { title: 'Le Chateau Ambulant', poster: './../../assets/chateauambulant.jpeg' },
+    { title: 'Ponyo Sur La Falaise', poster: './../../assets/ponyo.webp' },
+    { title: 'Le Tombeau Des Lucioles', poster: './../../assets/tombeau.webp' }
   ];
 
-  filmSelectionne: any;
+  public selectedMovie:{title:string, poster:string}|null=null;
 
-  afficherFilm(film: any): void {
-    this.filmSelectionne = film;
+  public showmovie(movie:{title: string, poster:string}){
+    this.selectedMovie=movie;
   }
+  
 }

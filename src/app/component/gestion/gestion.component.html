@@ -2,12 +2,17 @@
     <div id="composant">
         <div class="centered-content" *ngIf="getLastFormData != null; else noData">
             <h1>Formulaire :</h1>
-            <p>Prénom:</p>{{ getLastFormData.lastName }}
-            <p>Nom:</p>{{ getLastFormData.firstName }}
-            <p>Âge:</p>{{ getLastFormData.age }}
-            <p *ngIf="getLastFormData.email != ''">Email:{{ getLastFormData.email}}
-            </p>
-            <p>Commentaire:</p> {{ getLastFormData.comment }}
+            <p>Prénom:</p>
+            {{ getLastFormData.lastName }}
+            <p>Nom:</p>
+            {{ getLastFormData.firstName }}
+            <p>Âge:</p>
+            {{ getLastFormData.age }}
+            <p *ngIf="getLastFormData.email != ''"></p>
+            <p>Email:</p>
+            {{ getLastFormData.email}}
+            <p>Commentaire:</p>
+            {{ getLastFormData.comment }}
         </div>
         <ng-template #noData>
             <img [src]="'./../../assets/404.jpeg'" alt="404" id="img">
