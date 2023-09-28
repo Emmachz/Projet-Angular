@@ -1,13 +1,13 @@
 <div id="corp">
-    <form [formGroup]="contactForm" (ngSubmit)="sendCommentaire()" >
+    <form [formGroup]="contactForm" (ngSubmit)="sendCommentaire()">
         <h1 id="itemform">Formulair de contact</h1>
-        <div id="itemform"> 
+        <div id="itemform">
             <label for="firstName">Prénom : </label>
             <input type="text" id="firstName" formControlName="firstName">
         </div>
         <div id="itemform">
-          <label for="lastName">Nom : </label>
-          <input type="text" id="lastName" formControlName="lastName">
+            <label for="lastName">Nom : </label>
+            <input type="text" id="lastName" formControlName="lastName">
         </div>
         <div id="itemform">
             <label for="age">Age : </label>
@@ -18,16 +18,15 @@
             <input type="checkbox" (click)="doCheck()" [checked]="isChecked">
         </div>
         <div *ngIf="!isChecked" id="itemform">
-          <label for="email">Email : </label>
-          <input type="email" id="email" formControlName="email">
+            <label for="email">Email : </label>
+            <input type="email" id="email" formControlName="email">
         </div>
         <div id="itemform">
-          <label for="comment" id="titlecomment">Ajouter un commentaire : </label>
-          <textarea id="comment" formControlName="comment"></textarea>
+            <label for="comment" id="titlecomment">Ajouter un commentaire : </label>
+            <textarea id="comment" formControlName="comment"></textarea>
         </div>
-      
         <div id="itemform">
-          <input type="submit" value="Envoyer" [disabled]="contactForm.invalid">
+            <input type="submit" value="Envoyer" [disabled]="contactForm.invalid">
         </div>
-      </form>
+    </form>
 </div>
