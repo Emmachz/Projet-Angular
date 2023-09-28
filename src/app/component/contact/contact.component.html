@@ -3,17 +3,17 @@
         <h1>Formulair de contact</h1>
         <div >
             <label for="firstName">Prénom : </label>
-            <input type="text" id="firstName" formControlName="firstName" placeholder="Emma">
+            <input type="text" id="firstName" formControlName="firstName" placeholder="xx">
         </div>
         <div>
             <label for="lastName">Nom : </label>
-            <input type="text" id="lastName" formControlName="lastName" placeholder="Chen">
+            <input type="text" id="lastName" formControlName="lastName" placeholder="xx">
         </div>
         <div>
             <label for="age">Age : </label>
-            <input type="text" id="age" formControlName="age" placeholder="21">
+            <input type="text" id="age" formControlName="age" placeholder="12">
         </div>
-        <div>
+        <div id="checkbox">
             <label for="checkboxHideEmail">Cacher le email: </label>
             <input type="checkbox" (click)="checkEmail()" [checked]="checked">
         </div>
@@ -23,10 +23,10 @@
         </div>
         <div>
             <label for="comment" id="titlecomment">Ajouter un commentaire : </label>
-            <textarea id="comment" formControlName="comment"></textarea>
+            <textarea id="comment" formControlName="comment" placeholder="xx"></textarea>
         </div>
         <div>
-            <input type="submit" value="Envoyer" [disabled]="contactForm.invalid">
+            <input id="button" type="submit" value="Envoyer" [disabled]="contactForm.invalid">
         </div>
     </form>
 </div>

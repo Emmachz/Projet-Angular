@@ -1,74 +1,66 @@
-// #corp{
-//     background-color: white;
-//     height : 90vh;
-//     width: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-// #itemform{
-//     margin: 50px;
-// }
-
-// #comment{
-//     height: 100px;
-//     width: 200px;
-// }
-
-// #titlecomment{
-//     display: flex;
-// }
-
-#corp{
-    height: auto;
-    width: 100%;
-    background-color: rgba(7, 7, 7, 0.802);
-    display: flex;
+#corp {
+	height: 90vh;
+	width: 100%;
+	background-color: rgba(7, 7, 7, 0.802);
+	display: flex;
 	justify-content: center;
-    align-items: center;
-    
+	align-items: center;
 }
 
-form{
-    padding:30px 60px;
-	border-radius:15px;
-	text-align:center;
+#button {
+	width: 150px;
+	margin: auto;
+	color: white;
+	cursor: pointer;
+}
+
+#checkbox {
+	display: block;
+}
+
+form {
+	padding: 30px 60px;
+	border-radius: 15px;
+	text-align: center;
 	align-items: center;
 	justify-content: center;
-	width:600px;
-	height:800px;
-    background-color: white;
+	width: 500px;
+	height: auto;
+	background-color: white;
 }
 
-form div input, textarea{
-	border-radius: 7px;
-    background-color: rgba(7, 7, 7, 0.802);
+form div input,
+textarea {
+	border-radius: 5px;
+	background-color: rgba(7, 7, 7, 0.802);
+	color:white;
 }
 
 form div {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	margin-top:10px;
-    text-align:left;
+	margin-top: 10px;
+	text-align: left;
 }
 
-form div > label{
-	margin-bottom:7px;
+form div>label {
+	margin-bottom: 7px;
 }
 
-form div > input, form div > textarea{
-	border-radius: 8px;
-	font-size: 18px;
+form div>input,
+form div>textarea {
+	border-radius: 5px;
+	font-size: 15px;
 	font-weight: 500px;
 }
 
-form div > input{
-	height: 50px;
+form div>input {
+	height: 42px;
 	padding-left: 15px;
 }
 
-form div > textarea{
+form div>textarea {
 	height: 40px;
 	padding: 15px 0px 0px 10px;
 }
