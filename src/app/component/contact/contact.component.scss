@@ -1,20 +1,74 @@
+// #corp{
+//     background-color: white;
+//     height : 90vh;
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+// #itemform{
+//     margin: 50px;
+// }
+
+// #comment{
+//     height: 100px;
+//     width: 200px;
+// }
+
+// #titlecomment{
+//     display: flex;
+// }
+
 #corp{
-    background-color: white;
-    height : 90vh;
+    height: auto;
     width: 100%;
+    background-color: rgba(7, 7, 7, 0.802);
     display: flex;
-    justify-content: center;
+	justify-content: center;
     align-items: center;
-}
-#itemform{
-    margin: 50px;
+    
 }
 
-#comment{
-    height: 100px;
-    width: 200px;
+form{
+    padding:30px 60px;
+	border-radius:15px;
+	text-align:center;
+	align-items: center;
+	justify-content: center;
+	width:600px;
+	height:800px;
+    background-color: white;
 }
 
-#titlecomment{
-    display: flex;
+form div input, textarea{
+	border-radius: 7px;
+    background-color: rgba(7, 7, 7, 0.802);
+}
+
+form div {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-top:10px;
+    text-align:left;
+}
+
+form div > label{
+	margin-bottom:7px;
+}
+
+form div > input, form div > textarea{
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: 500px;
+}
+
+form div > input{
+	height: 50px;
+	padding-left: 15px;
+}
+
+form div > textarea{
+	height: 40px;
+	padding: 15px 0px 0px 10px;
 }
