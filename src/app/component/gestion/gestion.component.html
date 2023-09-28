@@ -2,24 +2,24 @@
     <div id="content" *ngIf="getLastFormData != null; else noData">
         <h1>Formulaire :</h1>
         <div>
-            <p>Prénom:</p>
-            {{ getLastFormData.lastName }}
+            <p>Prénom :
+            {{ getLastFormData.lastName }}</p>
         </div>
         <div>
-            <p>Nom:</p>
-            {{ getLastFormData.firstName }}
+            <p>Nom:
+            {{ getLastFormData.firstName }}</p>
         </div>
         <div>
-            <p>Âge:</p>
-            {{ getLastFormData.age }}
+            <p>Âge:
+            {{ getLastFormData.age }}</p>
         </div>
         <div>
-            <p *ngIf="getLastFormData.email != ''">Email:</p>
-            {{ getLastFormData.email}}
+            <p *ngIf="getLastFormData.email != ''">Email:
+            {{ getLastFormData.email}}</p>
         </div>
         <div>
-            <p>Commentaire:</p>
-            {{ getLastFormData.comment }}
+            <p>Commentaire:
+            {{ getLastFormData.comment }}</p>
         </div>
     </div>
     <ng-template #noData>
