@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {FormDataService} from "../../service/form-data.service";
-
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -12,27 +11,28 @@ import {FormDataService} from "../../service/form-data.service";
 export class ContactComponent {
 
   public isChecked:boolean = false;
-  public contactForm = new FormGroup(
+  public contactForm: FormGroup = this.data.group(
     {
       firstName : new FormControl('', [Validators.required]),
       lastName : new FormControl('', [Validators.required]),
-      age : new FormControl(''),
+      age : new FormControl('',[
+        Validators.pattern('^[0-9]*$'), // Validation pour accepter uniquement des chiffres
+      ]),
       email : new FormControl('', [Validators.required, Validators.email]),
       comment: new FormControl('', [Validators.required]),
     }
   );
 
-  constructor(private router: Router,private dataToSend: FormDataService) { }
+  constructor(private data : FormBuilder, private router: Router,private dataToSend: FormDataService) { }
 
   sendCommentaire(){
     alert("Le formulaire est valide");
-    this.dataToSend.setLastForm(this.contactForm);
+    this.dataToSend.setLastForm(this.contactForm.value);
     this.router.navigate(['/']);
   }
 
   doCheck() {
     this.isChecked = !this.isChecked;
-    console.log("test");
     if (!this.isChecked) {
       this.contactForm.get('email')?.setValidators([Validators.required, Validators.email]);
     } else {
@@ -41,5 +41,4 @@ export class ContactComponent {
     }
     this.contactForm.get('email')?.updateValueAndValidity();
   }
-
 }

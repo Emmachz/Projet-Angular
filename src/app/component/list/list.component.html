@@ -1,9 +1,9 @@
 <div id="back">
     <div id="list">
     <h2>Liste de Films Ghibli : </h2>
-        <div *ngFor="let film of films" (click)="afficherFilm(film)">
+        <li *ngFor="let film of films" (click)="afficherFilm(film)">
             {{ film.titre }}
-        </div>
+        </li>
     <div *ngIf="filmSelectionne">
         <h3>{{ filmSelectionne.titre }}</h3>
         <img id="affiche"[src]="filmSelectionne.affiche" alt="{{ filmSelectionne.titre }}" />

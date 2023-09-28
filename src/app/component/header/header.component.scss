@@ -4,7 +4,14 @@
     width: 100%;
 }
 
-a{
-    margin : 10px;
+#header a{
+    margin : 20px;
     color: white;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+#header a:hover {
+    color: #d3b5ce; /* Couleur de lien au survol */
+    text-decoration: underline; /* Soulignement au survol */
 }

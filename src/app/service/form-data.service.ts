@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 import {FormGroup} from "@angular/forms";
+import { User } from '../component/contact/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormDataService {
-  public lastForm: any = null;
+  private lastForm!: User;
   constructor() { }
 
-  public setLastForm(form: FormGroup) {
-    this.lastForm = form;
+  public setLastForm(form: User) {
+   this.lastForm = form;
   }
 
   public getMessage(){
