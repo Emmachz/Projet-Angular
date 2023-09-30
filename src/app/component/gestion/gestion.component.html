@@ -9,7 +9,7 @@
             <p>Nom:
             {{ getLastFormData.firstName }}</p>
         </div>
-        <div>
+        <div *ngIf="getLastFormData.age != ''">
             <p>Âge:
             {{ getLastFormData.age }}</p>
         </div>
@@ -20,6 +20,9 @@
         <div>
             <p>Commentaire:
             {{ getLastFormData.comment }}</p>
+        </div>
+        <div>
+            <img [src]="'./../../assets/shiba.avif'" alt="shiba" id="imgshiba">
         </div>
     </div>
     <ng-template #noData>
