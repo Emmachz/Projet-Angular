@@ -1,7 +1,12 @@
 li {
     cursor: pointer;
+    transition: color 0.3s, text-decoration 0.3s;
 }
 
+li:hover{
+    color: #d3b5ce;
+    text-decoration: underline;
+}
 #poster {
     height: 400px;
     width: 300px;

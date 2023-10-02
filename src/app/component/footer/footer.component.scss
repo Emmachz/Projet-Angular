@@ -16,4 +16,12 @@
     background-color: white;
     font-size: large;
     color: #355AAB;
+    transition: color 0.3s, text-decoration 0.3s;
 }
+
+#contact-botton:hover{
+    color: #d3b5ce;
+    text-decoration: underline;
+}
+
+

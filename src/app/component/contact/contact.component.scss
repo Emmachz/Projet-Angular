@@ -12,6 +12,12 @@
 	margin: auto;
 	color: white;
 	cursor: pointer;
+	transition: color 0.3s, text-decoration 0.3s;
+}
+
+#button:hover{
+	color: #d3b5ce;
+    text-decoration: underline;
 }
 
 #checkbox {
