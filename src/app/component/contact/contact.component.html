@@ -2,11 +2,11 @@
     <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
         <h1>Formulair de contact </h1>
         <div>
-            <label for="firstName">Prénom : </label>
+            <label for="firstName">Prénom* : </label>
             <input type="text" id="firstName" formControlName="firstName" placeholder="xx">
         </div>
         <div>
-            <label for="lastName">Nom : </label>
+            <label for="lastName">Nom* : </label>
             <input type="text" id="lastName" formControlName="lastName" placeholder="xx">
         </div>
         <div>
@@ -15,17 +15,17 @@
         </div>
         <div *ngIf="contactForm.get('age')?.hasError('pattern')" class="text-danger">
             L'âge doit contenir uniquement des chiffres.
-          </div>
+        </div>
         <div id="checkbox">
             <label for="checkboxHideEmail">Cacher le email: </label>
             <input type="checkbox" (click)="checkEmail()" [checked]="checked">
         </div>
         <div *ngIf="!checked">
-            <label for="email">Email : </label>
+            <label for="email">Email* : </label>
             <input type="email" id="email" formControlName="email" placeholder="xx@xx.xx">
         </div>
         <div>
-            <label for="comment" id="titlecomment">Ajouter un commentaire : </label>
+            <label for="comment" id="titlecomment">Ajouter un commentaire*: </label>
             <textarea id="comment" formControlName="comment" placeholder="xx"></textarea>
         </div>
         <div>
