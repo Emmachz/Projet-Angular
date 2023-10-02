@@ -1,6 +1,6 @@
 #corp {
 	height: 90vh;
-	width: 100%;
+	width: 100vw;
 	background-color: #aab9db;
 	display: flex;
 	justify-content: center;
@@ -19,7 +19,7 @@
 }
 
 form {
-	padding: 30px 60px;
+	padding: 20px 60px;
 	border-radius: 15px;
 	text-align: center;
 	align-items: center;
@@ -40,12 +40,12 @@ form div {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	margin-top: 8px;
+	margin-top: 6px;
 	text-align: left;
 }
 
 form div>label {
-	margin-bottom: 7px;
+	margin-bottom: 6px;
 }
 
 form div>input,

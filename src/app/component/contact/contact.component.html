@@ -2,6 +2,9 @@
     <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
         <h1>Formulair de contact </h1>
         <div>
+            <p>Les champs comportant * sont obligatoires. </p>
+        </div>
+        <div>
             <label for="firstName">Prénom* : </label>
             <input type="text" id="firstName" formControlName="firstName" placeholder="xx">
         </div>

@@ -23,12 +23,6 @@ export class ContactComponent {
     }
   );
 
-  public submitForm() {
-    alert("Formulaire validé bien jouée");
-    this.dataToSend.setLastForm(this.contactForm.value);
-    this.router.navigate(['/']);
-  }
-
   public checkEmail() {
     this.checked = !this.checked;
     if (this.checked) {
@@ -38,5 +32,11 @@ export class ContactComponent {
       this.contactForm.get('email')?.setValidators([Validators.required, Validators.email]);
     }
     this.contactForm.get('email')?.updateValueAndValidity();
+  }
+  
+  public submitForm() {
+    alert("Formulaire validé bien jouée");
+    this.dataToSend.setLastForm(this.contactForm.value);
+    this.router.navigate(['/']);
   }
 }
