@@ -15,9 +15,9 @@
 	transition: color 0.3s, text-decoration 0.3s;
 }
 
-#button:hover{
+#button:hover {
 	color: #d3b5ce;
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 #checkbox {
@@ -74,4 +74,8 @@ form div>textarea {
 #imgshiba {
 	height: 80px;
 	width: 80px;
+}
+
+.text-danger {
+	color: red;
 }
