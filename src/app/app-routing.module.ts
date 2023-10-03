@@ -7,13 +7,12 @@ import { ContactComponent } from './component/contact/contact.component';
 
 
 const routes: Routes = [
-  { path:'', redirectTo: 'AcceuilComponent', pathMatch:'full'},
+  { path: '', redirectTo: 'AcceuilComponent', pathMatch: 'full' },
   { path: 'list', component: ListComponent },
   { path: 'gestion', component: GestionComponent },
-  { path: 'acceuil', component: AcceuilComponent},
-  { path: 'contact', component: ContactComponent},
-  { path: '**',redirectTo:'/acceuil'}
-
+  { path: 'acceuil', component: AcceuilComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: '**', redirectTo: '/acceuil' }
 ];
 
 @NgModule({
