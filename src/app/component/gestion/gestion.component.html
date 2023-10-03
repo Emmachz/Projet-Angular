@@ -3,23 +3,23 @@
         <h1>Formulaire :</h1>
         <div>
             <p>Prénom :
-                {{ getLastFormData.lastName }}</p>
+                {{ getLastFormData.lastName | lowercase}}</p>
         </div>
         <div>
             <p>Nom:
-                {{ getLastFormData.firstName }}</p>
+                {{ getLastFormData.firstName | lowercase }}</p>
         </div>
         <div *ngIf="getLastFormData.age != ''">
             <p>Âge:
-                {{ getLastFormData.age }}</p>
+                {{ getLastFormData.age | lowercase}}</p>
         </div>
         <div>
             <p *ngIf="getLastFormData.email != ''">Email:
-                {{ getLastFormData.email}}</p>
+                {{ getLastFormData.email | lowercase}}</p>
         </div>
         <div>
             <p>Commentaire:
-                {{ getLastFormData.comment }}</p>
+                {{ getLastFormData.comment | lowercase}}</p>
         </div>
         <div>
             <img [src]="'./../../assets/shiba.avif'" alt="shiba" id="imgshiba">
