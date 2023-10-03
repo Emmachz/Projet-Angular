@@ -1,6 +1,6 @@
 <div id="back">
     <div id="list">
-        <h1>Liste de Films Ghibli : </h1>
+        <h1>Liste de Films {{"Ghibli" | uppercase}}: </h1>
         <li *ngFor="let movie of movies" (click)="showmovie(movie)">
             {{ movie.title }}
         </li>
